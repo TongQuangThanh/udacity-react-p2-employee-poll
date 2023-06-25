@@ -28,13 +28,11 @@ Employee polls is the 2nd project in React Nanodegree Course.
     - [Answer a poll](#answer-a-poll)
     - [See Poll Details](#see-poll-details)
     - [Display Leaderboard](#display-leaderboard)
-  - [Credits](#credits)
-  - [License](#license)
 
 ## Requirements
 
 Developed with:
-- Node > 10.x
+- Node 16.x
 - Google Chrome Browser
 - Several Nodejs package mainly focus on react ecosystem
 
