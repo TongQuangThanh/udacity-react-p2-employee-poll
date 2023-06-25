@@ -1,6 +1,6 @@
 <p align="center">
   <img height="100px" src="./public/logo192.png">
-  <p>Employee Polls</p>
+  <p align="center">Employee Polls</p>
 </p>
 <p align="center">
 <a href="https://travis-ci.org/Kemsty2/udacity-capstone">
