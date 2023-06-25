@@ -13,11 +13,13 @@ class Poll extends Component {
             {/* <img src="" width="70" height="70" alt="" /> */}
             <img src="https://img.icons8.com/windows/96/000000/poll-vertical.png" alt="" />
           </span>
-          <h3> By {author.name}</h3>
-          <p className="mt-2">
-            <img src={author.avatarURL} className="user_avatar mr-2" alt="avatar" />
-            <em> At {new Date(poll.timestamp).toLocaleDateString()}</em>
-          </p>
+          <div className="w-100 mt-2 d-flex justify-content-between align-items-center">
+            <div className="d-flex align-items-center">
+              <img src={author.avatarURL} className="user_avatar mr-2" alt="avatar" /><b>{author.name}</b>
+            </div>
+            <div className="flex-1"></div>
+            <em>{new Date(poll.timestamp).toLocaleDateString()}</em>
+          </div>
         </Link>
       </div>
     );

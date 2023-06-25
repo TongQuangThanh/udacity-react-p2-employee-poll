@@ -10,7 +10,7 @@ const initialState = {
 const message = (state = initialState, action = {}) => {
   switch (action.type) {
     case SUCCESS:
-      if (action.message) toast.info(action.message);
+      if (action.message) toast.success(action.message);
       return {
         ...state,
         status: "success",

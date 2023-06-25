@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createBrowserHistory } from "history";
-import configureStore, { saveState, loadState } from "./Redux/store";
+import configureStore, { saveState } from "./Redux/store";
 import UnAuthenticatedRoute from "./Routes/UnAuthenticatedRoute";
 import Loadable from "react-loadable";
 import Loader from "./Components/Loader";
@@ -26,11 +26,10 @@ const baseUrl = document.getElementsByTagName("base")[0]?.getAttribute("href");
 const history = createBrowserHistory({ basename: baseUrl });
 
 //  Load Serialize State
-const persistedState = loadState();
-const initialState = Object.assign({}, window.initialReduxState, { ...persistedState });
-const store = configureStore(history, initialState);
+// const persistedState = loadState();
+// const initialState = Object.assign({}, window.initialReduxState, { ...persistedState });
+const store = configureStore(history, null);
 
-// On any state change, save the state to localStorage.
 // Prevent the saveState function from being called too many times in case that
 // state updates vary fast.
 store.subscribe(

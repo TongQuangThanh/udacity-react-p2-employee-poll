@@ -48,7 +48,7 @@ class OptionsContainer extends Component {
           <div id="top-wizard">
             {answer ? (
               <Link
-                to={`/questions/${question.id}`}
+                to={`/`}
                 className="animated_link cursor-pointer"
               >
                 <span id="location">
