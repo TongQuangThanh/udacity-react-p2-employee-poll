@@ -1,0 +1,20 @@
+body {
+  overflow: invisible;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+#general_page {
+  height: calc(100vh - 70px - 16px - 48px);
+}
+
+.dropdown-menu.show {
+  left: -10px !important;
+}
