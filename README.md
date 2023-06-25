@@ -1,4 +1,7 @@
-<p align="center"><img height="100px" src="./public/logo192.png"></p>
+<p align="center">
+  <img height="100px" src="./public/logo192.png">
+  <p>Employee Polls</p>
+</p>
 <p align="center">
 <a href="https://travis-ci.org/Kemsty2/udacity-capstone">
     <img src="https://travis-ci.org/Kemsty2/udacity-capstone.svg?branch=master">
