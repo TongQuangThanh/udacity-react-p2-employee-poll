@@ -2,12 +2,11 @@ import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createBrowserHistory } from "history";
-import configureStore, { saveState } from "./Redux/store";
+import configureStore from "./Redux/store";
 import UnAuthenticatedRoute from "./Routes/UnAuthenticatedRoute";
 import Loadable from "react-loadable";
 import Loader from "./Components/Loader";
 import { toast } from "react-toastify";
-import throttle from "lodash/throttle";
 
 import "./assets/css/bootstrap.css";
 import "./assets/css/menu.css";
@@ -26,18 +25,7 @@ const baseUrl = document.getElementsByTagName("base")[0]?.getAttribute("href");
 const history = createBrowserHistory({ basename: baseUrl });
 
 //  Load Serialize State
-// const persistedState = loadState();
-// const initialState = Object.assign({}, window.initialReduxState, { ...persistedState });
-const store = configureStore(history, null);
-
-// Prevent the saveState function from being called too many times in case that
-// state updates vary fast.
-store.subscribe(
-  throttle(() => {
-    const { user } = store.getState();
-    saveState({ user });
-  }, 1000)
-); // At most once this length of time.
+const store = configureStore(history);
 
 const LoginRoute = Loadable({
   loader: () => import("./Pages/Login/Login"),

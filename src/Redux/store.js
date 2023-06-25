@@ -6,7 +6,7 @@ import message from "./Reducers/messageReducer";
 import polls from "./Reducers/pollsReducer";
 import question from "./Reducers/questionReducer";
 
-export default function configureStore(history, initialState) {
+export default function configureStore(history) {
   const reducers = {
     user,
     message,
@@ -34,33 +34,6 @@ export default function configureStore(history, initialState) {
 
   return createStore(
     rootReducer,
-    // initialState,
     compose(applyMiddleware(...middleware), ...enhancers)
   );
 }
-
-// export const loadState = () => {
-//   try {
-//     // const serializedState = localStorage.getItem('state')
-//     // if (serializedState === null) { // The key 'state' does not exist.
-//     //   return undefined;             // Let our reducer initialize the app.
-//     // }
-
-//     return JSON.parse(serializedState)
-
-//   } catch (error) {
-//     console.error(error);
-//     return undefined // Let our reducer initialize the app.
-//   }
-// };
-
-export const saveState = (state) => {
-  try {
-    // Serialize the state. Redux store is recommended to be serializable.
-    // const serializedState = JSON.stringify(state)
-    // localStorage.setItem('state', serializedState)
-
-  } catch (error) {
-    console.error(error)
-  }
-};

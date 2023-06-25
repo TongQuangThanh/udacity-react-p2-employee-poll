@@ -10,7 +10,6 @@ class Poll extends Component {
       <div className="col-lg-4 col-md-6">
         <Link to={`questions/${pollType === 2 ? poll.id : poll.id + "/result"}`} className="box_topic">
           <span>
-            {/* <img src="" width="70" height="70" alt="" /> */}
             <img src="https://img.icons8.com/windows/96/000000/poll-vertical.png" alt="" />
           </span>
           <div className="w-100 mt-2 d-flex justify-content-between align-items-center">

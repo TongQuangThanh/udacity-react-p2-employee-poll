@@ -9,7 +9,6 @@ import {
 import classNames from "classnames";
 import { userLogout } from "../Redux/Actions/user";
 import { connect } from "react-redux";
-import { logo } from "../utils";
 
 class Header extends Component {
   constructor(props) {
